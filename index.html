@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bounce</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Assets/wine-bottle.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Assets/style.css" />
+</head>
+
+<body>
+    <div class="homepage-hero-module">
+        <div class="video-container">
+            <div class="filter">
+                <div id="heading" class="container-fluid">
+                    <h2 class="text-center col-xs-8 col-xs-offset-2 title">Welcome to Bounce.</h2>
+                    <h4 id="randomtxt1" class="text-center col-xs-8 col-xs-offset-2">Allow us to take care of the plans, <br> while you focus on the fun.</h4>
+                    <div class="text-center">
+                        <button id="start-button" class="btn btn-primary col-xs-6 col-xs-offset-3">Let's get the night started!</button>
+                    </div>
+                </div>
+            </div>
+            <video autoplay loop class="fillWidth">
+                <source src="CoverVideo/MP4/The-DJ.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="CoverVideo/WEBM/The-DJ.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div class="poster hidden">
+                <img src="CoverVideo/Snapshots/The-DJ.jpg" alt="Night time bar">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid get-user-info">
+        <div id="main-input" class="container-fluid text-center">
+            <h1>Enter in the information below to get results!</h1>
+            <form>
+                <label class="col-xs-12 text-center"><span class="glyphicon glyphicon-user"></span>Name</label>
+                <input id="name" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center" type="text">
+                <label class="col-xs-12 text-center"><span class="glyphicon glyphicon-leaf"></span>Interests</label>
+                <input id="interests" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center" type="text">
+                <label class="col-xs-12 text-center"><span class="glyphicon glyphicon-globe"></span>Location</label>
+                <input id="address" value='' class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center" type="text">
+                <label class="col-xs-12 text-center"><span class="glyphicon glyphicon-plane"></span>Distance in kilometers</label>
+                <input id="radius" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center" type="text">
+               <!--  <label class="col-xs-12 text-center"><span class="glyphicon glyphicon-music"></span>What artist would you care to bounce to?</label>
+                <input id="select-artist" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center" type="text"> -->
+                <button id="submit-button" value='geocode' type="button" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 btn text-center">Submit<span class="glyphicon glyphicon-send"></span></button>
+            </form>
+        </div>
+    </div>
+    <div id="map-wrapper">
+        <button id="re-do" type="button" class=" col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4 btn text-center">Search again!</button>
+        <div id="map" class="container-fluid text-center"></div>
+        <div class="end-section text-center col-xs-6 col-xs-offset-3">
+            <h2 id="populate-name" class="text-center"></h2>
+            <div id="music-player" class="text-center"></div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Assets/bounce.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaDejXVVUNUIMF_LeRZ8NxSt5Rc8Cb0Mc&libraries=places&callback=initMap" async defer></script>
+</body>
+
+</html>
